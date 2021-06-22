@@ -30,8 +30,12 @@ Below is an overview of how to use this application:
 * Open github on your desktop, cd into the directory, and run: node index.js
 * Answers the questions that are prompted in your terminal, and see that a generatedReadme.md file has been created in your directory with your inputs.
 
-## More Info
+## ScreenShot
 
+![readmegen](./media/readmegenss.jpg)
+
+## Video
+![video](.media/readmegen.mp4)
 
 
 
