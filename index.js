@@ -1,7 +1,7 @@
 // packages for the app
 const inquirer = require ('inquirer');
 const fs = require ('fs');
-const { inherits } = require('util');
+const generateMarkdown = require('./generateMarkdown');
 
 //questions for users to add their inputs
 const questions = [
@@ -61,6 +61,7 @@ const questions = [
 ];
 // write to a new readme file
 function writeToFile(fileName, data) {
+
     fs.writeFileSync(fileName, generateMarkdown(data));
 }
 
@@ -68,8 +69,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer
     .prompt(questions)
-    .then((data) => {
-    writeToFile('generated-readme.md', data);
+    .then((response) => {
+    writeToFile('generatedReadme.md', response);
     })
 }
 
